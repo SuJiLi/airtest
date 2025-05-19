@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Airtest Report </title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/css/report.css" rel="stylesheet">
+
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/jquery-1.10.2.min.js"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/langpack/zh_CN.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/lazyload.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+      data = {"steps": [{"title": "Connect device", "time": 1745911009.7662904, "code": {"name": "connect_device", "args": [{"key": "uri", "value": "android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&"}]}, "screen": null, "desc": "Connect device: android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911055.4552512, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744883377895.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883377895.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883377895.png", "resolution": [1054, 2051]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055369.jpg", "rect": [], "pos": [], "vector": [], "confidence": null, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055369.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055369_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\utils\\logwraper.py\", line 134, in wrapper\n    res = f(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\core\\api.py\", line 617, in wait\n    pos = loop_find(v, timeout=timeout, interval=interval, intervalfunc=intervalfunc)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\utils\\logwraper.py\", line 134, in wrapper\n    res = f(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\core\\cv.py\", line 80, in loop_find\n    raise TargetNotFoundError('Picture %s not found in screen' % query)\nairtest.core.error.TargetNotFoundError: 'Picture Template(D:\\\\PiaoFang_Test\\\\core_gameplay\\\\cangku.air\\\\tpl1744883377895.png) not found in screen'\n", "log": "", "assert": null}, {"title": "Touch", "time": 1745911059.787772, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744883794540.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883794540.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.419, 0.967], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883794540.png", "resolution": [75, 94]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055684.jpg", "rect": [{"left": 955.52, "top": 2107.3599999999997, "width": 75.0, "height": 94.0}], "pos": [[993, 2154]], "vector": [], "confidence": 0.9865596294403076, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055684.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911055684_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911070.8389685, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744883830711.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883830711.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883830711.png", "resolution": [961, 1238]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911070768.jpg", "rect": [{"left": 66, "top": 416, "width": 934, "height": 1203}], "pos": [[533, 1017]], "vector": [], "confidence": 0.7056268453598022, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911070768.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911070768_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1745911075.8395987, "code": {"name": "sleep", "args": [{"key": "secs", "value": 5}]}, "screen": null, "desc": "Wait for 5 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1745911076.481037, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744883854578.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883854578.png", "threshold": 0.7, "target_pos": 5, "record_pos": [-0.332, -0.508], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883854578.png", "resolution": [176, 67]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911076251.jpg", "rect": [{"left": 93.44, "top": 528.36, "width": 176.0, "height": 67.0}], "pos": [[181, 561]], "vector": [], "confidence": 0.9993638396263123, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911076251.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911076251_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911083.1612618, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744883873852.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883873852.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883873852.png", "resolution": [953, 1360]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911083125.jpg", "rect": [{"left": 55, "top": 418, "width": 952, "height": 1359}], "pos": [[531, 1097]], "vector": [], "confidence": 0.8388780951499939, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911083125.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911083125_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1745911088.162002, "code": {"name": "sleep", "args": [{"key": "secs", "value": 5}]}, "screen": null, "desc": "Wait for 5 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1745911088.7181914, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744883899896.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883899896.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.0, -0.505], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883899896.png", "resolution": [161, 65]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911088468.jpg", "rect": [{"left": 460.0, "top": 533.6, "width": 161.0, "height": 65.0}], "pos": [[540, 566]], "vector": [], "confidence": 0.9998185038566589, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911088468.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911088468_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911090.6103053, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744883938151.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883938151.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883938151.png", "resolution": [958, 1359]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911090561.jpg", "rect": [{"left": 55, "top": 413, "width": 954, "height": 1356}], "pos": [[532, 1091]], "vector": [], "confidence": 0.7043129801750183, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911090561.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911090561_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1745911095.6113658, "code": {"name": "sleep", "args": [{"key": "secs", "value": 5}]}, "screen": null, "desc": "Wait for 5 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1745911096.1615918, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744883966324.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883966324.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.166, -0.505], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883966324.png", "resolution": [161, 70]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911095927.jpg", "rect": [{"left": 639.28, "top": 530.6, "width": 161.0, "height": 70.0}], "pos": [[719, 565]], "vector": [], "confidence": 0.999902606010437, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911095927.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911095927_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911104.834225, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744883987410.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883987410.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744883987410.png", "resolution": [929, 1351]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911104793.jpg", "rect": [{"left": 67, "top": 421, "width": 928, "height": 1353}], "pos": [[531, 1097]], "vector": [], "confidence": 0.7304197400808334, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911104793.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911104793_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1745911109.83733, "code": {"name": "sleep", "args": [{"key": "secs", "value": 5}]}, "screen": null, "desc": "Wait for 5 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1745911110.33775, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744884033036.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884033036.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.331, -0.507], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884033036.png", "resolution": [160, 65]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911110088.jpg", "rect": [{"left": 817.48, "top": 530.4399999999999, "width": 161.0, "height": 65.0}], "pos": [[897, 562]], "vector": [], "confidence": 0.9808907508850098, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911110088.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911110088_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1745911111.713823, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1744884069163.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884069163.png", "threshold": 0.7, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884069163.png", "resolution": [968, 1241]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111662.jpg", "rect": [{"left": 66, "top": 441, "width": 712, "height": 912}], "pos": [[422, 897]], "vector": [], "confidence": 0.7507795095443726, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111662.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111662_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1745911112.2314088, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1744884084964.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884084964.png", "threshold": 0.7, "target_pos": 5, "record_pos": [-0.394, -0.599], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1744884084964.png", "resolution": [75, 72]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111984.jpg", "rect": [{"left": 77, "top": 427.08000000000004, "width": 75, "height": 72.0}], "pos": [[114, 463]], "vector": [], "confidence": 0.9997431635856628, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111984.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911111984_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Exists", "time": 1745911112.5856264, "code": {"name": "exists", "args": [{"key": "v", "value": {"filename": "tpl1745907542094.png", "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1745907542094.png", "threshold": 0.7, "target_pos": 5, "record_pos": null, "resolution": [], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\tpl1745907542094.png", "resolution": [122, 143]}]}, "screen": {"src": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911112539.jpg", "rect": [{"left": 494, "top": 2071, "width": 122, "height": 143}], "pos": [[555, 2142]], "vector": [], "confidence": 0.9976996183395386, "resolution": [1080, 2220], "_filepath": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911112539.jpg", "thumbnail": "D:\\PiaoFang_Test\\core_gameplay\\log\\88390271c7fa1eea7f35f02104289cf1\\1745911112539_small.jpg"}, "desc": "Image  exists", "traceback": "", "log": "", "assert": null}], "name": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air", "scale": 0.5, "test_result": true, "run_end": 1745911112.5856264, "run_start": 1745911008.0772314, "static_root": "C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/", "lang": "en", "records": [], "info": {"name": "cangku.air", "path": "D:\\PiaoFang_Test\\core_gameplay\\cangku.air\\cangku.py", "author": "", "title": "", "desc": "", "devices": {"235424b0b00c7ece": "android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&"}}, "log": "..\\log\\88390271c7fa1eea7f35f02104289cf1\\log.txt", "console": ""};
+      lang = new Lang();
+      lang.init({
+        defaultLang: 'en',
+        currentLang: 'en'
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div id="main" class="main col-md-12">
+          <div id="back_multi"></div>
+          <h1 class="title">Airtest Report </h1>
+          
+          <div class="summary" >
+
+            <div class="show-horizontal">
+              <div class="info info1">
+                <div class="info-left">
+                  <img id='result-img' />
+                </div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Airtest Report</span>
+                    <label id='result-desc' lang="en"></label>
+                  </div>
+                  <div class="info-content">
+                    <div class='info-sub start'></div>
+                    <div class='info-sub time'></div>
+                  </div>
+                  <div class="info-toal">
+                    <div class="info-step">
+                      <span class="info-name" lang="en">Steps: </span>
+                      <span class="info-value">18</span>
+                    </div>
+                    <div class="info-time">
+                      <span class="info-name" lang="en">Time: </span>
+                      <span class="info-value duration">xxx</span>
+                    </div>
+                    
+                    
+                    <div class="info-log">
+                      <span class="info-name" lang="en">Log: </span>
+                      <span class="info-value log">
+                        <a href="..\log\88390271c7fa1eea7f35f02104289cf1\log.txt" target="_blank" download="log.txt">log.txt <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/download_log.svg" /></a>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="info info2">
+                <div class="info-left"></div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Executors</span></div>
+                  <div class="info-content">
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                        <div class="info-name" lang="en">Author: Anonymous</div>
+                      
+                    </div>
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      <div class="info-file" title="D:\PiaoFang_Test\core_gameplay\cangku.air\cangku.py">cangku.air
+                        <img id="copy_path" class="copy-img" data-value="D:\PiaoFang_Test\core_gameplay\cangku.air\cangku.py" title="copy file path to clipboard" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/copy.svg" />
+                      </div>
+                    </div>
+
+                    
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                      <div class="info-file" title="android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&amp;"><span lang="en">Device: </span> 235424b0b00c7ece
+                        <img class="copy-img" title="copy file path to clipboard" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/copy.svg" data-value="android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&amp;"/>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="device" id='device'>
+          </div>
+          <!-- 可以额外显示自定义模块，支持插入Html内容 -->
+          
+          <div class="gallery">
+            <div class="info-title"><span lang="en">Quick view</span></div>
+            <div class ='placeholder'>
+              <div class="content">
+              </div>
+            </div>
+          </div>
+
+          <!--单步-->
+          
+          
+          <div class="steps">
+            <div class="content">
+              <div class="steps-head">
+                <div class="head-left">
+                  <div class="order" id='order'><span lang="en">order</span></div>
+                  <div class="order" id='duration'><span lang="en">duration</span></div>
+                  <div class="order" id='status'><span lang="en">status</span></div>
+                </div>
+                <div class="head-right">
+                  <span lang="en" class="jump-wrong" id='jump-wrong'>Jump to wrong step</span>
+                  <span lang="en">Filter by:</span>
+                  <span class="filters">
+                    <span lang="en" class="filter" id="all" alt="show all steps">All</span>
+                    <span lang="en" class="filter" id='success' alt="show success steps only">Success</span>
+                    <span lang="en" class="filter" id='fail' alt="show failed steps only">Failed</span>
+                    <span lang="en" class="filter" id="assert" alt="show steps with assertion only">Assert</span>
+                  </span>
+                </div>
+              </div>
+              <div class="steps-content">
+                <div class="step-left" id='step-left'>
+                  <div class="step-list"></div>
+                  <div id="pageTool"></div>
+                </div>
+                <div class="step-right" id='step-right'></div>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+        
+      
+      <div class="footer">
+        <div class="footer-content">
+          <div class="foo">
+            <div class="interfaces">
+              <a class="icon" href="https://github.com/AirtestProject/Airtest"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/Airtest.png" alt="airtest">
+              </a>
+              <a class="icon" href="https://github.com/AirtestProject/poco"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/poco.png" alt="Poco">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="apps">
+              <a class="icon ide" href="http://airtest.netease.com/"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/AirtestIDE.png" alt="AirtestIDE">
+              </a>
+              <a class="icon" href="https://airlab.163.com/"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/AirLab.png" alt="AirLab">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="corp">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/netease.png" alt="NetEase">
+                <span lang="en">© 1997 - 2020 NetEase, Inc. All Rights Reserved.</span>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+      </div>
+      <!-- 录屏 -->
+      <div class="row gif-wrap show">
+          <div class="menu">
+            <div class="pattern pattern1">
+              <div class="minimize">
+                <img title="minimize" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/minimize.svg" />
+              </div>
+              <div class="close">
+                <img title="close" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/close.svg" />
+              </div>
+            </div>
+            <div class="pattern pattern2">
+              <div class="maximize">
+                <img title="maximize" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/maximize.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            
+          </div>
+        </div>
+        <!-- max pic -->
+      <div id='magnify' class="mask hide">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+  <link href="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/css/monokai_sublime.min.css" rel="stylesheet">
+  <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/highlight.min.js"></script>
+  <script type="text/javascript" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/paging.js"></script>
+  <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/report.js"></script>
+</body>
+</html>

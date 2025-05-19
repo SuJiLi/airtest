@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Airtest Report </title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/css/report.css" rel="stylesheet">
+
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/jquery-1.10.2.min.js"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/langpack/zh_CN.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/lazyload.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+      data = {"steps": [{"title": "Connect device", "time": 1741767689.620608, "code": {"name": "connect_device", "args": [{"key": "uri", "value": "android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&"}]}, "screen": null, "desc": "Connect device: android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1741767694.5356042, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1741758383305.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758383305.png", "threshold": 0.6, "target_pos": 5, "record_pos": [-0.44, -0.217], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758383305.png", "resolution": [101, 101]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767693290.jpg", "rect": [{"left": 8, "top": 12, "width": 101, "height": 101}], "pos": [[58, 62]], "vector": [], "confidence": 0.7270463109016418, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767693290.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767693290_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1741767726.3652513, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1741760537158.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741760537158.png", "threshold": 0.6, "target_pos": 5, "record_pos": [-0.006, -0.132], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741760537158.png", "resolution": [1030, 1888]}, {"key": "timeout", "value": 30}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767726309.jpg", "rect": [], "pos": [], "vector": [], "confidence": null, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767726309.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767726309_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\utils\\logwraper.py\", line 134, in wrapper\n    res = f(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\core\\api.py\", line 617, in wait\n    pos = loop_find(v, timeout=timeout, interval=interval, intervalfunc=intervalfunc)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\utils\\logwraper.py\", line 134, in wrapper\n    res = f(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\B27\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\airtest\\core\\cv.py\", line 80, in loop_find\n    raise TargetNotFoundError('Picture %s not found in screen' % query)\nairtest.core.error.TargetNotFoundError: 'Picture Template(D:\\\\gouwuche\\\\PiaoFangXinShou.air\\\\tpl1741760537158.png) not found in screen'\n", "log": "", "assert": null}, {"title": "Wait", "time": 1741767728.7169209, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1741758409843.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758409843.png", "threshold": 0.6, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758409843.png", "resolution": [500, 127]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767728674.jpg", "rect": [{"left": 577, "top": 1869, "width": 500, "height": 127}], "pos": [[827, 1932]], "vector": [], "confidence": 0.9999667406082153, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767728674.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767728674_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1741767729.7186363, "code": {"name": "sleep", "args": [{"key": "secs", "value": 1}]}, "screen": null, "desc": "Wait for 1 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1741767731.107989, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1741758428263.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758428263.png", "threshold": 0.6, "target_pos": 5, "record_pos": [0.219, 0.76], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758428263.png", "resolution": [389, 114]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767730879.jpg", "rect": [{"left": 583.52, "top": 1878.8, "width": 365.0, "height": 107.0}], "pos": [[766, 1932]], "vector": [], "confidence": 0.684671938419342, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767730879.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767730879_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1741767738.8913348, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1741758448374.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758448374.png", "threshold": 0.6, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758448374.png", "resolution": [1015, 1331]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767738837.jpg", "rect": [{"left": 355, "top": 460, "width": 690, "height": 907}], "pos": [[700, 913]], "vector": [], "confidence": 0.8027487993240356, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767738837.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767738837_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}, {"title": "Sleep", "time": 1741767739.8927453, "code": {"name": "sleep", "args": [{"key": "secs", "value": 1}]}, "screen": null, "desc": "Wait for 1 seconds", "traceback": "", "log": "", "assert": null}, {"title": "Touch", "time": 1741767741.6214979, "code": {"name": "touch", "args": [{"key": "v", "value": {"filename": "tpl1741758469151.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758469151.png", "threshold": 0.6, "target_pos": 5, "record_pos": [0.0, 0.51], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758469151.png", "resolution": [259, 96]}, {"key": "kwargs", "value": {}}, {"key": "times", "value": 1}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767741388.jpg", "rect": [{"left": 410.0, "top": 1613.8, "width": 261.0, "height": 96.0}], "pos": [[540, 1661]], "vector": [], "confidence": 0.9961860775947571, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767741388.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767741388_small.jpg"}, "desc": "Touch target image", "traceback": "", "log": "", "assert": null}, {"title": "Wait", "time": 1741767748.8942573, "code": {"name": "wait", "args": [{"key": "v", "value": {"filename": "tpl1741758496659.png", "_filepath": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758496659.png", "threshold": 0.6, "target_pos": 5, "record_pos": [0.003, -0.009], "resolution": [1080, 2220], "rgb": false, "scale_max": 800, "scale_step": 0.005, "__class__": "Template"}, "image": "D:\\gouwuche\\PiaoFangXinShou.air\\tpl1741758496659.png", "resolution": [916, 1580]}, {"key": "timeout", "value": 40}, {"key": "interval", "value": 0.5}, {"key": "intervalfunc", "value": null}]}, "screen": {"src": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767748847.jpg", "rect": [{"left": 91, "top": 371, "width": 876, "height": 1511}], "pos": [[529, 1126]], "vector": [], "confidence": 0.6075213551521301, "resolution": [1080, 2220], "_filepath": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767748847.jpg", "thumbnail": "C:\\Users\\B27\\AppData\\Local\\Temp\\AirtestIDE\\scripts\\c0a42be51610bc6f54e8aaee7007af35\\1741767748847_small.jpg"}, "desc": "Wait for target image to appear", "traceback": "", "log": "", "assert": null}], "name": "D:\\gouwuche\\PiaoFangXinShou.air", "scale": 0.5, "test_result": true, "run_end": 1741767748.8942573, "run_start": 1741767688.4517732, "static_root": "C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/", "lang": "en", "records": [], "info": {"name": "PiaoFangXinShou.air", "path": "D:\\gouwuche\\PiaoFangXinShou.air\\PiaoFangXinShou.py", "author": "B27", "title": "", "desc": "", "devices": {"235424b0b00c7ece": "android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&"}}, "log": "", "console": ""};
+      lang = new Lang();
+      lang.init({
+        defaultLang: 'en',
+        currentLang: 'en'
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div id="main" class="main col-md-12">
+          <div id="back_multi"></div>
+          <h1 class="title">Airtest Report </h1>
+          
+          <div class="summary" >
+
+            <div class="show-horizontal">
+              <div class="info info1">
+                <div class="info-left">
+                  <img id='result-img' />
+                </div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Airtest Report</span>
+                    <label id='result-desc' lang="en"></label>
+                  </div>
+                  <div class="info-content">
+                    <div class='info-sub start'></div>
+                    <div class='info-sub time'></div>
+                  </div>
+                  <div class="info-toal">
+                    <div class="info-step">
+                      <span class="info-name" lang="en">Steps: </span>
+                      <span class="info-value">10</span>
+                    </div>
+                    <div class="info-time">
+                      <span class="info-name" lang="en">Time: </span>
+                      <span class="info-value duration">xxx</span>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="info info2">
+                <div class="info-left"></div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Executors</span></div>
+                  <div class="info-content">
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                        <div class="info-name"><span lang="en">Author:</span> B27</div>
+                      
+                    </div>
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      <div class="info-file" title="D:\gouwuche\PiaoFangXinShou.air\PiaoFangXinShou.py">PiaoFangXinShou.air
+                        <img id="copy_path" class="copy-img" data-value="D:\gouwuche\PiaoFangXinShou.air\PiaoFangXinShou.py" title="copy file path to clipboard" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/copy.svg" />
+                      </div>
+                    </div>
+
+                    
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                      <div class="info-file" title="android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&amp;"><span lang="en">Device: </span> 235424b0b00c7ece
+                        <img class="copy-img" title="copy file path to clipboard" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/copy.svg" data-value="android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&amp;"/>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="device" id='device'>
+          </div>
+          <!-- 可以额外显示自定义模块，支持插入Html内容 -->
+          
+          <div class="gallery">
+            <div class="info-title"><span lang="en">Quick view</span></div>
+            <div class ='placeholder'>
+              <div class="content">
+              </div>
+            </div>
+          </div>
+
+          <!--单步-->
+          
+          
+          <div class="steps">
+            <div class="content">
+              <div class="steps-head">
+                <div class="head-left">
+                  <div class="order" id='order'><span lang="en">order</span></div>
+                  <div class="order" id='duration'><span lang="en">duration</span></div>
+                  <div class="order" id='status'><span lang="en">status</span></div>
+                </div>
+                <div class="head-right">
+                  <span lang="en" class="jump-wrong" id='jump-wrong'>Jump to wrong step</span>
+                  <span lang="en">Filter by:</span>
+                  <span class="filters">
+                    <span lang="en" class="filter" id="all" alt="show all steps">All</span>
+                    <span lang="en" class="filter" id='success' alt="show success steps only">Success</span>
+                    <span lang="en" class="filter" id='fail' alt="show failed steps only">Failed</span>
+                    <span lang="en" class="filter" id="assert" alt="show steps with assertion only">Assert</span>
+                  </span>
+                </div>
+              </div>
+              <div class="steps-content">
+                <div class="step-left" id='step-left'>
+                  <div class="step-list"></div>
+                  <div id="pageTool"></div>
+                </div>
+                <div class="step-right" id='step-right'></div>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+        
+      
+      <div class="footer">
+        <div class="footer-content">
+          <div class="foo">
+            <div class="interfaces">
+              <a class="icon" href="https://github.com/AirtestProject/Airtest"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/Airtest.png" alt="airtest">
+              </a>
+              <a class="icon" href="https://github.com/AirtestProject/poco"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/poco.png" alt="Poco">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="apps">
+              <a class="icon ide" href="http://airtest.netease.com/"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/AirtestIDE.png" alt="AirtestIDE">
+              </a>
+              <a class="icon" href="https://airlab.163.com/"  target="_blank">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/AirLab.png" alt="AirLab">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="corp">
+                <img src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/netease.png" alt="NetEase">
+                <span lang="en">© 1997 - 2020 NetEase, Inc. All Rights Reserved.</span>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+      </div>
+      <!-- 录屏 -->
+      <div class="row gif-wrap show">
+          <div class="menu">
+            <div class="pattern pattern1">
+              <div class="minimize">
+                <img title="minimize" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/minimize.svg" />
+              </div>
+              <div class="close">
+                <img title="close" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/close.svg" />
+              </div>
+            </div>
+            <div class="pattern pattern2">
+              <div class="maximize">
+                <img title="maximize" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/image/maximize.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            
+          </div>
+        </div>
+        <!-- max pic -->
+      <div id='magnify' class="mask hide">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+  <link href="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/css/monokai_sublime.min.css" rel="stylesheet">
+  <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/highlight.min.js"></script>
+  <script type="text/javascript" src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/paging.js"></script>
+  <script src="C:/Users/B27/AppData/Local/Programs/Python/Python311/Lib/site-packages/airtest/report/js/report.js"></script>
+</body>
+</html>

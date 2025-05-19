@@ -1,0 +1,2 @@
+{"tag": "function", "depth": 1, "time": 1745917961.669785, "data": {"name": "connect_device", "call_args": {"uri": "android://127.0.0.1:5037/235424b0b00c7ece?touch_method=MAXTOUCH&"}, "start_time": 1745917960.1444757, "ret": "<Android '235424b0b00c7ece'>", "end_time": 1745917961.669785}}
+{"tag": "function", "depth": 1, "time": 1745917962.7251785, "data": {"name": "connect_device", "call_args": {"uri": "Android:///"}, "start_time": 1745917961.6727848, "ret": "<Android '235424b0b00c7ece'>", "end_time": 1745917962.7251785}}
