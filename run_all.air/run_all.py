@@ -2,10 +2,6 @@ import os
 from airtest.core.api import *
 from airtest.core.api import connect_device, start_app, stop_app
 from airtest.report.report import simple_report, LogToHtml
-
-
-print("当前工作目录:", os.getcwd())
-print("图片目录内容:", os.listdir(ST.IMAGE_DIR))
 def restart_mini_program():
     """模拟用户操作重新进入小程序"""
     try:
