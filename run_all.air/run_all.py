@@ -2,39 +2,44 @@ import os
 import sys
 import time
 from airtest.core.api import *
-from airtest.core.api import connect_device
 from airtest.report.report import simple_report, LogToHtml
-from airtest.core.settings import Settings as ST
 
 def get_image_dir():
-    """智能获取图片目录路径（兼容新旧版Airtest）"""
-    try:
-        # 方案1：优先使用Airtest推荐路径
-        from airtest.core.settings import Settings as ST
-        if hasattr(ST, "TEMPLATE_DIR"):
-            return os.path.join(ST.TEMPLATE_DIR, "img")
-    except:
-        pass
+    """智能获取图片目录路径（兼容所有情况）"""
+    # 方案1：优先使用脚本所在目录
+    script_dir = os.path.dirname(__file__)
     
-    """直接返回脚本所在目录（不强制要求img子目录）"""
-    return os.path.dirname(__file__)
+    # 方案2：检查是否存在图片文件
+    test_files = ["tpl1744793615178.png", "tpl1744793643021.png"]
+    for f in test_files:
+        if not os.path.exists(os.path.join(script_dir, f)):
+            # 如果找不到文件，尝试使用Airtest的TEMPLATE_DIR
+            try:
+                from airtest.core.settings import Settings as ST
+                if hasattr(ST, "TEMPLATE_DIR"):
+                    return ST.TEMPLATE_DIR
+            except:
+                pass
+    return script_dir
 
 def restart_mini_program():
     """模拟用户操作重新进入小程序"""
     try:
-        # 1. 点击右上角三个点（直接引用同级目录图片）
-        touch(Template(r"tpl1744793615178.png", 
+        image_dir = get_image_dir()
+        
+        # 1. 点击右上角三个点
+        touch(Template(os.path.join(image_dir, "tpl1744793615178.png"), 
                       record_pos=(0.279, -0.95), 
                       resolution=(1080, 2220)))
         time.sleep(5)
         
         # 2. 点击重新进入按钮
-        touch(Template(r"tpl1744793643021.png",
+        touch(Template(os.path.join(image_dir, "tpl1744793643021.png"),
                       record_pos=(0.093, 0.674),
                       resolution=(1080, 2220)))
         
         # 3. 验证是否重启成功
-        if wait(Template(r"tpl1744793695052.png",
+        if wait(Template(os.path.join(image_dir, "tpl1744793695052.png"),
                        record_pos=(-0.003, 0.049),
                        resolution=(1080, 2220)), timeout=100):
             print("重启成功")
@@ -43,24 +48,34 @@ def restart_mini_program():
     except Exception as e:
         print(f"[WARNING] 重启小程序失败: {str(e)}")
         return False
-    
+
 def run_test_script(script_path, device_uri="Android:///"):
     """执行单个测试脚本"""
     try:
         print(f"\n[INFO] 开始执行脚本: {os.path.basename(script_path)}")
         
-        # 动态获取图片目录并验证
-        image_dir = get_image_dir()
-        if not os.path.exists(image_dir):
-            raise FileNotFoundError(f"图片目录不存在: {image_dir}")
+        # 验证脚本路径是否存在
+        if not os.path.exists(script_path):
+            raise FileNotFoundError(f"脚本路径不存在: {script_path}")
         
-        # 连接设备
-        connect_device(device_uri)
+        # 连接设备（增加重试机制）
+        for i in range(3):
+            try:
+                connect_device(device_uri)
+                break
+            except Exception as e:
+                if i == 2:
+                    raise
+                print(f"[RETRY] 设备连接失败，正在重试... ({i+1}/3)")
+                time.sleep(2)
         
-        # 通过命令行调用 airtest run
-        ret = os.system(f"airtest run {script_path} --device {device_uri} --log ./logs")
+        # 执行脚本（使用绝对路径）
+        cmd = f'airtest run "{script_path}" --device "{device_uri}" --log ./logs'
+        print(f"执行命令: {cmd}")
+        ret = os.system(cmd)
+        
         if ret != 0:
-            raise RuntimeError(f"脚本返回非零状态码: {ret}")
+            raise RuntimeError(f"脚本执行失败，返回码: {ret}")
             
         return True
         
@@ -74,11 +89,15 @@ def main():
     modules = ["test.air", "check_ui.air"]  # 可扩展其他模块
     device_uri = "Android:///TPC7N18515001155"  # 使用你的设备ID
     
+    # 初始化日志目录
+    os.makedirs("./logs", exist_ok=True)
+    
     success_modules = []
     failed_modules = []
     
     for module in modules:
         script_path = os.path.join(test_dir, module)
+        print(f"\n{'='*30}\n开始处理模块: {module}\n{'='*30}")
         
         # 首次尝试执行
         if run_test_script(script_path, device_uri):
@@ -104,6 +123,12 @@ def main():
     print(f"\n失败模块 ({len(failed_modules)}个):")
     for m in failed_modules: print(f"  - {m}")
     
+    # 生成HTML报告
+    try:
+        simple_report(__file__, logpath="./logs")
+    except Exception as e:
+        print(f"[WARNING] 生成报告失败: {str(e)}")
+    
     # 如果有失败的模块则返回非零状态码
     if failed_modules:
         sys.exit(1)
@@ -111,4 +136,5 @@ def main():
 if __name__ == "__main__":
     # 设置工作目录为脚本所在位置
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    
     main()
