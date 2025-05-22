@@ -4,42 +4,22 @@ import time
 from airtest.core.api import *
 from airtest.report.report import simple_report, LogToHtml
 
-def get_image_dir():
-    """智能获取图片目录路径（兼容所有情况）"""
-    # 方案1：优先使用脚本所在目录
-    script_dir = os.path.dirname(__file__)
-    
-    # 方案2：检查是否存在图片文件
-    test_files = ["tpl1744793615178.png", "tpl1744793643021.png"]
-    for f in test_files:
-        if not os.path.exists(os.path.join(script_dir, f)):
-            # 如果找不到文件，尝试使用Airtest的TEMPLATE_DIR
-            try:
-                from airtest.core.settings import Settings as ST
-                if hasattr(ST, "TEMPLATE_DIR"):
-                    return ST.TEMPLATE_DIR
-            except:
-                pass
-    return script_dir
-
 def restart_mini_program():
-    """模拟用户操作重新进入小程序"""
+    """模拟用户操作重新进入小程序（图片与脚本同级目录）"""
     try:
-        image_dir = get_image_dir()
-        
-        # 1. 点击右上角三个点
-        touch(Template(os.path.join(image_dir, "tpl1744793615178.png"), 
+        # 1. 点击右上角三个点（直接引用同级目录图片）
+        touch(Template(r"tpl1744793615178.png", 
                       record_pos=(0.279, -0.95), 
                       resolution=(1080, 2220)))
         time.sleep(5)
         
         # 2. 点击重新进入按钮
-        touch(Template(os.path.join(image_dir, "tpl1744793643021.png"),
+        touch(Template(r"tpl1744793643021.png",
                       record_pos=(0.093, 0.674),
                       resolution=(1080, 2220)))
         
         # 3. 验证是否重启成功
-        if wait(Template(os.path.join(image_dir, "tpl1744793695052.png"),
+        if wait(Template(r"tpl1744793695052.png",
                        record_pos=(-0.003, 0.049),
                        resolution=(1080, 2220)), timeout=100):
             print("重启成功")
