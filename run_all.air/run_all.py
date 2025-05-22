@@ -134,5 +134,4 @@ if __name__ == "__main__":
     # 打印关键路径信息（调试用）
     print(f"当前工作目录: {os.getcwd()}")
     print(f"ST.IMAGE_DIR: {getattr(ST, 'IMAGE_DIR', '未设置')}")
-    
     main()
