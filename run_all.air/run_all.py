@@ -147,7 +147,7 @@ if __name__ == "__main__":
     start_app("com.tencent.mm")
     sleep(10)
     swipe((501,334),(567,1539))
-    touch(Template(r"tpl1747623798740.png", record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
+    touch(Template(r"tpl1747623798740.png", threshold=0.5, record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
     sleep(60)
     # 设置工作目录为脚本所在位置
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
