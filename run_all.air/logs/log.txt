@@ -1,1 +1,1 @@
-{"tag": "function", "depth": 1, "time": 1747969581.4069605, "data": {"name": "connect_device", "call_args": {"uri": "Android:///235424b0b00c7ece"}, "start_time": 1747969576.673889, "ret": "<Android '235424b0b00c7ece'>", "end_time": 1747969581.4069605}}
+{"tag": "function", "depth": 1, "time": 1747972597.9578612, "data": {"name": "connect_device", "call_args": {"uri": "Android:///TPC7N18515001155"}, "start_time": 1747972596.4179173, "ret": "<Android 'TPC7N18515001155'>", "end_time": 1747972597.9578612}}

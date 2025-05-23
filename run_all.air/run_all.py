@@ -75,7 +75,7 @@ def main():
     # 配置初始化
     test_dir = os.path.join(os.path.dirname(__file__), "..", "core_gameplay")  # 使用相对路径
     modules = ["check_ui.air"]  # 可扩展其他模块
-    device_uri = "Android:///235424b0b00c7ece"
+    device_uri = "Android:///TPC7N18515001155"
     
     # 初始化日志目录
     os.makedirs("./logs", exist_ok=True)
@@ -137,12 +137,27 @@ def is_locked():
 
 if __name__ == "__main__":
     
-    dev = connect_device("Android:///235424b0b00c7ece")
-    if is_locked():
-        keyevent("POWER")  # 唤醒屏幕
-        swipe((551,1800),(543,470))  # 滑动解锁
+    dev = connect_device("Android:///TPC7N18515001155")
+    max_retries = 3
+    retry_count = 0
+
+    while retry_count < max_retries:
+        if is_locked():
+            keyevent("POWER")  # 唤醒屏幕
+            swipe((551,1800),(543,470))
+            # 再次检查是否仍然锁定
+            if is_locked():
+                keyevent("POWER")
+                swipe((551,1800),(543,470))  # 滑动解锁
+                break  # 解锁成功则退出循环
+            else:
+                retry_count += 1
+                print(f"屏幕又息屏了，重试 {retry_count}/{max_retries}")
+        else:
+            print("设备已解锁")
+            break
     else:
-        print("设备已解锁")
+        print("达到最大重试次数，解锁失败")
     sleep(5)
     start_app("com.tencent.mm")
     sleep(10)
