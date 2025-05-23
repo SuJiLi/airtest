@@ -75,7 +75,7 @@ def main():
     # 配置初始化
     test_dir = os.path.join(os.path.dirname(__file__), "..", "core_gameplay")  # 使用相对路径
     modules = ["check_ui.air"]  # 可扩展其他模块
-    device_uri = "Android:///TPC7N18515001155"
+    device_uri = "Android:///235424b0b00c7ece"
     
     # 初始化日志目录
     os.makedirs("./logs", exist_ok=True)
@@ -137,17 +137,18 @@ def is_locked():
 
 if __name__ == "__main__":
     
-    dev = connect_device("Android:///TPC7N18515001155")
+    dev = connect_device("Android:///235424b0b00c7ece")
     if is_locked():
-    keyevent("POWER")  # 唤醒屏幕
-    swipe((551,1800),(543,470))  # 滑动解锁
-else:
-    print("设备已解锁")
-touch(Template(r"tpl1747380949540.png", record_pos=(0.0, 0.261), resolution=(1080, 2240)))
-sleep(10)
-swipe((501,334),(567,1539))
-touch(Template(r"tpl1747623798740.png", record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
-sleep(60)
+        keyevent("POWER")  # 唤醒屏幕
+        swipe((551,1800),(543,470))  # 滑动解锁
+    else:
+        print("设备已解锁")
+    sleep(5)
+    start_app("com.tencent.mm")
+    sleep(10)
+    swipe((501,334),(567,1539))
+    touch(Template(r"tpl1747623798740.png", record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
+    sleep(60)
     # 设置工作目录为脚本所在位置
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     
