@@ -7,7 +7,7 @@ from airtest.core.settings import Settings as ST  # 显式导入Settings
 
 # 修复ST.IMAGE_DIR问题（关键修改）
 if not hasattr(ST, 'IMAGE_DIR'):
-    ST.IMAGE_DIR = os.path.join(os.path.dirname(__file__), "..")  # 指向上级目录
+    ST.IMAGE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def restart_mini_program():
     """模拟用户操作重新进入小程序（使用绝对路径引用图片）"""
