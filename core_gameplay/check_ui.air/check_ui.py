@@ -5,7 +5,8 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from airtest.core.settings import Settings as ST 
 from common import check_image1,check_image2,check_zhujiemian
-
+ 
+device = get_device()
 # check_image1(r"tpl1744944246113.png")
 log_dir = r"D:\PiaoFang_Test\core_gameplay\check_ui_log"
 os.makedirs(log_dir, exist_ok=True)  # 确保目录存在

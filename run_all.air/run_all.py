@@ -40,10 +40,30 @@ def is_locked():
     output = shell("dumpsys window")
     return "mDreamingLockscreen=true" in output or "isShowing=true" in output
 
+
+_global_device = None
+
+def init_device(device_uri="Android:///"):
+    """
+    初始化全局设备连接
+    :param device_uri: 设备连接字符串
+    :return: 设备实例
+    """
+    global _global_device
+    if not _global_device:
+        try:
+            _global_device = connect_device(device_uri)
+            logging.info(f"已连接设备: {_global_device}")
+        except Exception as e:
+            logging.error(f"设备连接失败: {str(e)}")
+            raise
+    return _global_device
+
 if __name__ == "__main__":
+    
+    init_device("Android:///TPC7N18515001155")
         # 设置工作目录为脚本所在位置
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    dev = connect_device("Android:///TPC7N18515001155")
     
     max_retries = 3
     retry_count = 0
