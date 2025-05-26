@@ -136,11 +136,16 @@ def is_locked():
     return "mDreamingLockscreen=true" in output or "isShowing=true" in output
 
 if __name__ == "__main__":
+        # 设置工作目录为脚本所在位置
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     
+    # 打印关键路径信息（调试用）
+    print(f"当前工作目录: {os.getcwd()}")
+    print(f"ST.IMAGE_DIR: {getattr(ST, 'IMAGE_DIR', '未设置')}")
     dev = connect_device("Android:///TPC7N18515001155")
+    
     max_retries = 3
     retry_count = 0
-
     while retry_count < max_retries:
         if is_locked():
             keyevent("POWER")  # 唤醒屏幕
@@ -164,10 +169,5 @@ if __name__ == "__main__":
     swipe((501,334),(567,1539))
     touch(Template(r"tpl1747623798740.png", threshold=0.5, record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
     sleep(60)
-    # 设置工作目录为脚本所在位置
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    
-    # 打印关键路径信息（调试用）
-    print(f"当前工作目录: {os.getcwd()}")
-    print(f"ST.IMAGE_DIR: {getattr(ST, 'IMAGE_DIR', '未设置')}")
+
     main()
