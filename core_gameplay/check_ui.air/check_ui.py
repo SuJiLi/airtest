@@ -4,15 +4,14 @@ from airtest.report.report import simple_report
 import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from airtest.core.settings import Settings as ST 
-from common import check_image1,check_image2,check_zhujiemian,init_device,get_device
- 
-device = get_device()
-# check_image1(r"tpl1744944246113.png")
+from common import check_image1,check_image2,check_zhujiemian,init_device
+init_device("Android:///TPC7N18515001155")
+sleep(10)
 log_dir = r"D:\PiaoFang_Test\core_gameplay\check_ui_log"
 os.makedirs(log_dir, exist_ok=True)  # 确保目录存在
 set_logdir(log_dir)  # 强制指定日志位置
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-sleep(10)
+
 if exists(Template(r"tpl1747623526623.png")):
     touch(Template(r"tpl1747623606770.png", record_pos=(0.219, 0.716), resolution=(1080, 2240)))
     sleep(5)

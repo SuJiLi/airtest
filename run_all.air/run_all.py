@@ -4,7 +4,6 @@ import time
 from airtest.core.api import *
 from airtest.report.report import simple_report, LogToHtml
 from airtest.core.settings import Settings as ST  # 显式导入Settings
-from common import init_device,get_device
 
 def restart_mini_program():
     """模拟用户操作重新进入小程序（使用绝对路径引用图片）"""
@@ -43,9 +42,10 @@ def is_locked():
 
 if __name__ == "__main__":
     
-    init_device("Android:///TPC7N18515001155")
+    dev = connect_device("Android:///TPC7N18515001155")
         # 设置工作目录为脚本所在位置
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
     
     max_retries = 3
     retry_count = 0
