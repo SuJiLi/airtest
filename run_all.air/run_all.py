@@ -4,6 +4,7 @@ import time
 from airtest.core.api import *
 from airtest.report.report import simple_report, LogToHtml
 from airtest.core.settings import Settings as ST  # 显式导入Settings
+from common import init_device,get_device
 
 def restart_mini_program():
     """模拟用户操作重新进入小程序（使用绝对路径引用图片）"""
@@ -39,25 +40,6 @@ def is_locked():
     """
     output = shell("dumpsys window")
     return "mDreamingLockscreen=true" in output or "isShowing=true" in output
-
-
-_global_device = None
-
-def init_device(device_uri="Android:///"):
-    """
-    初始化全局设备连接
-    :param device_uri: 设备连接字符串
-    :return: 设备实例
-    """
-    global _global_device
-    if not _global_device:
-        try:
-            _global_device = connect_device(device_uri)
-            logging.info(f"已连接设备: {_global_device}")
-        except Exception as e:
-            logging.error(f"设备连接失败: {str(e)}")
-            raise
-    return _global_device
 
 if __name__ == "__main__":
     

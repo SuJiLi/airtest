@@ -36,5 +36,28 @@ def shengji():
 def renwu():
     if exists(Template(r"tpl1745479096513.png")):
         touch(Template(r"tpl1745479096513.png", record_pos=(0.425, 0.771), resolution=(1080, 2220)))
+        
+_global_device = None      
+def init_device(device_uri="Android:///"):
+    """
+    初始化全局设备连接
+    :param device_uri: 设备连接字符串
+    :return: 设备实例
+    """
+    global _global_device
+    if not _global_device:
+        try:
+            _global_device = connect_device(device_uri)
+            logging.info(f"已连接设备: {_global_device}")
+        except Exception as e:
+            logging.error(f"设备连接失败: {str(e)}")
+            raise
+    return _global_device
+
+def get_device():
+    """获取已连接的设备实例"""
+    if not _global_device:
+        raise RuntimeError("设备未初始化，请先调用init_device()")
+    return _global_device
 
 

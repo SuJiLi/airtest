@@ -4,7 +4,7 @@ from airtest.report.report import simple_report
 import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from airtest.core.settings import Settings as ST 
-from common import check_image1,check_image2,check_zhujiemian
+from common import check_image1,check_image2,check_zhujiemian,init_device,get_device
  
 device = get_device()
 # check_image1(r"tpl1744944246113.png")
