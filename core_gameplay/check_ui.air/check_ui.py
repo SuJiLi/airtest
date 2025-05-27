@@ -88,8 +88,8 @@ if exists(Template(r"tpl1744947683824.png")):
     check_image1(r"tpl1744947723689.png")
     touch(Template(r"tpl1744947745686.png", record_pos=(-0.435, -0.838), resolution=(1080, 2220)))
     check_zhujiemian()
-sleep(5)
-touch(Template(r"tpl1745734189447.png", record_pos=(-0.431, -0.843), resolution=(1080, 2220)))
+else:
+    touch(Template(r"tpl1745734189447.png", record_pos=(-0.431, -0.843), resolution=(1080, 2220)))
 touch(Template(r"tpl1744947786818.png", record_pos=(0.446, -0.684), resolution=(1080, 2220)))
 check_image2(r"tpl1744947824629.png")
 swipe((134,554),(807,559))
@@ -109,7 +109,7 @@ if exists(Template(r"tpl1744955606877.png")):
 if exists(Template(r"tpl1744955665152.png")):
     touch(Template(r"tpl1744955665152.png", record_pos=(0.338, -0.517), resolution=(1080, 2220)))
     check_image2(r"tpl1744955697660.png")
-touch(Template(r"tpl1744955723730.png", record_pos=(-0.441, -0.678), resolution=(1080, 2220)))
+touch(Template(r"tpl1748311551886.png", record_pos=(-0.435, 0.946), resolution=(1080, 2240)))
 check_zhujiemian()
 touch(Template(r"tpl1744957295444.png", record_pos=(-0.22, -0.447), resolution=(1080, 2220)))
 check_image2(r"tpl1744957319202.png")
