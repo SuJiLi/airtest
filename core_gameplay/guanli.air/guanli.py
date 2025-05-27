@@ -5,6 +5,8 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from common import check_image1,check_image2,check_zhujiemian
 
+
+dev = connect_device("Android:///TPC7N18515001155")
 os.path.dirname(os.path.abspath(__file__))
 log_dir = r"D:\PiaoFang_Test\core_gameplay\guanli_log"
 os.makedirs(log_dir, exist_ok=True)  # 确保目录存在
