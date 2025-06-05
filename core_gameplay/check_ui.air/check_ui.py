@@ -17,6 +17,15 @@ def is_locked():
 
 
 dev = connect_device("Android:///TPC7N18515001155")
+try:
+    dev = connect_device("Android:///TPC7N18515001155")
+    if not dev:
+        raise RuntimeError("设备连接失败")
+    print("设备连接成功")
+except Exception as e:
+    print(f"设备连接异常: {str(e)}")
+    sys.exit(1)  # 非零退出码会标记构建失败:ml-citation{ref="6" data="citationList
+    
 max_retries = 3
 retry_count = 0
 while retry_count < max_retries:
