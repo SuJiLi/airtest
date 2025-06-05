@@ -136,7 +136,7 @@ check_zhujiemian()
 touch(Template(r"tpl1744959014248.png", record_pos=(0.206, -0.826), resolution=(1080, 2220)))
 check_image1(r"tpl1744959033098.png")
 sleep(1)
-touch(Template(r"tpl1745840718360.png", record_pos=(-0.449, -0.84), resolution=(1080, 2220)))
+touch(Template(r"tpl1749106617460.png", record_pos=(-0.438, 0.974), resolution=(1080, 2240)))
 check_zhujiemian()
 simple_report(
     filepath=__file__,

@@ -22,14 +22,17 @@ def check_image2(image_path):
             print("界面不正常")
 #检查某些界面返回主界面时会打开建筑界面
 def check_zhujiemian():
-    if not exists(Template(r"tpl1745907542094.png")):
+    sleep(3)
+    if not exists(Template(r"tpl1745907542094.png", threshold=0.6)):
         print("存在异常界面就关闭")
         touch(Template(r"tpl1744872751817.png", record_pos=(-0.421, -0.664), resolution=(1080, 2220)))
 def shengji():
+    sleep(3)
     if exists(Template(r"tpl1745478669410.png", threshold=0.9)):
         touch(Template(r"tpl1745478853818.png", record_pos=(0.002, 0.631), resolution=(1080, 2220)))
 
 def renwu():
+    sleep(3)
     if exists(Template(r"tpl1745479096513.png")):
         touch(Template(r"tpl1745479096513.png", record_pos=(0.425, 0.771), resolution=(1080, 2220)))
          
