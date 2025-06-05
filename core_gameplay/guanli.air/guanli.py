@@ -48,8 +48,8 @@ check_zhujiemian()
 touch(Template(r"tpl1744881341689.png", record_pos=(-0.279, 0.811), resolution=(1080, 2220)))
 check_image1(r"tpl1744881364694.png")
 touch(Template(r"tpl1744881412045.png", record_pos=(-0.456, -0.845), resolution=(1080, 2220)))
-touch(Template(r"tpl1745912768129.png", record_pos=(-0.276, 0.959), resolution=(1080, 2220)))
 check_zhujiemian()
+touch(Template(r"tpl1745912768129.png", record_pos=(-0.276, 0.959), resolution=(1080, 2220)))
 simple_report(
     filepath=__file__,
     logpath=log_dir,

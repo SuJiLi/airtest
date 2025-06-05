@@ -8,6 +8,9 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from common import check_image1,check_image2,check_zhujiemian,shengji,renwu
 
+dev = connect_device("Android:///TPC7N18515001155")
+os.path.dirname(os.path.abspath(__file__))
+
 auto_setup(__file__)
 ST.THRESHOLD = 0.5
 log_dir = r"D:\PiaoFang_Test\core_gameplay\xinshou_log"

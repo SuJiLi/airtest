@@ -32,6 +32,79 @@ def restart_mini_program():
     except Exception as e:
         print(f"[WARNING] 重启小程序失败: {str(e)}")
         return False
+    
+    
+    
+def call_multiple_air_scripts_with_recovery(script_paths):
+    """
+    按顺序调用多个AIR脚本，带有错误恢复机制
+    
+    参数:
+        script_paths: 要调用的AIR脚本路径列表
+    
+    返回:
+        dict: 包含每个脚本调用结果的字典
+    """
+    original_dir = os.getcwd()
+    results = {}
+    
+    for idx, script_path in enumerate(script_paths, 1):
+        script_name = os.path.basename(script_path)
+        script_dir = os.path.dirname(script_path)
+        
+        try:
+            # 切换到目标目录
+            os.chdir(script_dir)
+            print(f"\n[{idx}/{len(script_paths)}] 切换到目录: {script_dir}")
+            
+            # 调用脚本
+            print(f"开始调用脚本: {script_name}")
+            using(script_name)
+            
+            # 记录成功结果
+            results[script_name] = {
+                'status': 'success',
+                'message': '脚本调用成功',
+                'recovery_executed': False
+            }
+            print(f"脚本 {script_name} 调用成功")
+            
+        except Exception as e:
+            # 记录原始错误信息
+            error_msg = str(e)
+            print(f"\n脚本 {script_name} 调用失败: {error_msg}")
+            print("尝试执行恢复操作...")
+            
+            # 执行恢复方法
+            recovery_success = restart_mini_program()
+            
+            # 记录失败结果（包含恢复信息）
+            results[script_name] = {
+                'status': 'failed',
+                'message': error_msg,
+                'recovery_executed': True,
+                'recovery_success': recovery_success,
+                'traceback': traceback.format_exc()
+            }
+            
+            print(f"恢复操作执行{'成功' if recovery_success else '失败'}，将继续执行下一个脚本")
+            
+        finally:
+            # 每个脚本调用后都恢复原始目录
+            os.chdir(original_dir)
+    
+    # 最终汇总报告
+    print("\n所有脚本调用完成，结果汇总:")
+    for name, result in results.items():
+        status = result['status']
+        msg = result['message']
+        if result['status'] == 'failed':
+            recovery_info = "（已执行恢复）" if result['recovery_executed'] else ""
+            print(f"{name}: {status}{recovery_info} - {msg}")
+        else:
+            print(f"{name}: {status} - {msg}")
+    
+    return results
 def is_locked():
     """
     通过adb检测设备是否锁屏
@@ -72,3 +145,16 @@ if __name__ == "__main__":
     swipe((501,334),(567,1539))
     touch(Template(r"tpl1747623798740.png", threshold=0.5, record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
     sleep(60)
+    test_sequence = [
+        r"D:\PiaoFang_Test\core_gameplay\check_ui.air",
+    ]
+    
+    # 调用带恢复功能的顺序执行方法
+    final_results = call_multiple_air_scripts_with_recovery(test_sequence)
+    
+    # 分析最终结果
+    failed_scripts = [name for name, res in final_results.items() if res['status'] == 'failed']
+    if not failed_scripts:
+        print("\n✅ 所有脚本执行成功！")
+    else:
+        print(f"\n⚠️ 有 {len(failed_scripts)} 个脚本执行失败: {', '.join(failed_scripts)}")
