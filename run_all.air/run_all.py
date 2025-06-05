@@ -4,6 +4,9 @@ import time
 from airtest.core.api import *
 from airtest.report.report import simple_report, LogToHtml
 from airtest.core.settings import Settings as ST  # 显式导入Settings
+from airtest.cli.runner import AirtestCase, run_script
+from airtest.cli.parser import runner_parser
+import traceback
 
 def restart_mini_program():
     """模拟用户操作重新进入小程序（使用绝对路径引用图片）"""
@@ -57,9 +60,20 @@ def call_multiple_air_scripts_with_recovery(script_paths):
             os.chdir(script_dir)
             print(f"\n[{idx}/{len(script_paths)}] 切换到目录: {script_dir}")
             
-            # 调用脚本
+            # 调用脚本 - 使用更可靠的调用方式
             print(f"开始调用脚本: {script_name}")
-            using(script_name)
+            
+            # 创建并配置运行参数
+            args = runner_parser.parse_args([])
+            args.script = script_name
+            args.device = []  # 确保device参数存在
+            
+            # 初始化AirtestCase
+            test_case = AirtestCase(args)
+            test_case.setUpClass()
+            
+            # 运行脚本
+            run_script(args, test_case)
             
             # 记录成功结果
             results[script_name] = {
@@ -92,6 +106,10 @@ def call_multiple_air_scripts_with_recovery(script_paths):
         finally:
             # 每个脚本调用后都恢复原始目录
             os.chdir(original_dir)
+            try:
+                test_case.tearDownClass()
+            except:
+                pass
     
     # 最终汇总报告
     print("\n所有脚本调用完成，结果汇总:")
@@ -105,6 +123,7 @@ def call_multiple_air_scripts_with_recovery(script_paths):
             print(f"{name}: {status} - {msg}")
     
     return results
+
 def is_locked():
     """
     通过adb检测设备是否锁屏
@@ -143,6 +162,7 @@ if __name__ == "__main__":
     start_app("com.tencent.mm")
     sleep(10)
     swipe((501,334),(567,1539))
+    sleep(5)
     touch(Template(r"tpl1747623798740.png", threshold=0.5, record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
     sleep(60)
     test_sequence = [
