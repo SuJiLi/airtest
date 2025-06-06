@@ -14,8 +14,10 @@ check_image1(r"tpl1744883377895.png")
 touch(Template(r"tpl1744883794540.png", record_pos=(0.419, 0.967), resolution=(1080, 2220)))
 check_image1(r"tpl1744883830711.png")
 sleep(5)
-touch(Template(r"tpl1744883854578.png", record_pos=(-0.332, -0.508), resolution=(1080, 2220)))
-check_image1(r"tpl1744883873852.png")
+if exists(Template(r"tpl1749173610440.png")):
+    touch(Template(r"tpl1749173610440.png", record_pos=(-0.331, -0.47), resolution=(1080, 2240)))
+else:  
+    check_image1(r"tpl1744883873852.png")
 sleep(5)
 touch(Template(r"tpl1744883899896.png", record_pos=(0.0, -0.505), resolution=(1080, 2220)))
 check_image1(r"tpl1744883938151.png")
