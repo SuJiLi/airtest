@@ -96,7 +96,7 @@ sleep(5)
 
 touch(Template(r"tpl1744873262934.png", record_pos=(-0.421, 0.394), resolution=(1080, 2220))
 sleep(5)
-if exists(Template(r"tpl1749175511564.png"))
+if exists(Template(r"tpl1749175511564.png")):
       touch(Template(r"tpl1749175511564.png", record_pos=(0.183, 0.294), resolution=(1080, 2240)))
       sleep(5)
       touch((734,2045))
