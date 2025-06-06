@@ -99,7 +99,7 @@ sleep(5)
 if exists(Template(r"tpl1749175511564.png")):
     touch(Template(r"tpl1749175511564.png", record_pos=(0.183, 0.294), resolution=(1080, 2240)))
     sleep(5)
-    touch((734,2045))
+    touch((475,452))
 sleep(5)
 touch(Template(r"tpl1744881944457.png", record_pos=(-0.419, 0.96), resolution=(1080, 2220)))
 check_zhujiemian()

@@ -179,6 +179,8 @@ try:
         touch((831,1501))
 except TargetNotFoundError:
         print("没有触发艺人提升")
+        
+check_zhujiemian()
 
 
 
