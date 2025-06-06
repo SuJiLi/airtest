@@ -173,8 +173,6 @@ sleep(5)
 touch(Template(r"tpl1743066926158.png", record_pos=(-0.405, -0.663), resolution=(1080, 2220)))
 touch(Template(r"tpl1744773610572.png", record_pos=(-0.452, -0.85), resolution=(1080, 2220)))
 check_zhujiemian()
-if not exists(Template(r"tpl1745831603390.png")):
-       touch(Template(r"tpl1745831622206.png", record_pos=(-0.42, -0.667), resolution=(1080, 2220)))
 simple_report(
     filepath=__file__,
     logpath=log_dir,
