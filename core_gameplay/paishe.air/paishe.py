@@ -5,7 +5,7 @@ from airtest.core.api import *
 from airtest.report.report import simple_report
 import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
-from common import check_image1,check_image2,check_zhujiemian
+from common import check_image1,check_image2,check_zhujiemian,chonglian
 
 dev = connect_device("Android:///TPC7N18515001155")
 os.path.dirname(os.path.abspath(__file__))
@@ -148,46 +148,14 @@ try:
 except TargetNotFoundError:
         print("没有助手提示")
 check_image1(r"tpl1744610874972.png")
-sleep(20)
-touch((924,921))
-sleep(5)
-touch((1022,870))
-if exists(Template(r"tpl1745394562271.png")):
-    touch(Template(r"tpl1745394582852.png", record_pos=(0.003, 0.22), resolution=(1080, 2220)))
-sleep(15)
-if exists(Template(r"tpl1745386826498.png")):
-    touch(Template(r"tpl1745386879709.png", record_pos=(-0.447, -0.845), resolution=(1080, 2220)))
-if exists(Template(r"tpl1744611084945.png")):
-    touch(Template(r"tpl1744611304017.png", record_pos=(-0.42, -0.842), resolution=(1080, 2220)))
-check_image1(r"tpl1744611335936.png")
-if exists(Template(r"tpl1744611335936.png")):
-    touch(Template(r"tpl1744611356905.png", record_pos=(-0.001, 0.209), resolution=(1080, 2220)))
-sleep(10)
-if exists(Template(r"tpl1745744392200.png", threshold=0.8)):
-    touch(Template(r"tpl1745744420355.png", record_pos=(0.0, 0.499), resolution=(1080, 2220)))
-sleep(5)
-try:
-    if exists(Template(r"tpl1744611390681.png")):
-        
-        touch(Template(r"tpl1744611407072.png", record_pos=(-0.446, -0.844), resolution=(1080, 2220)))
-except TargetNotFoundError:
-        print("没有上排名")
-sleep(5)
-try:
-    if exists(Template(r"tpl1744611434695.png")):
-        
-        touch((831,1501))
-except TargetNotFoundError:
-        print("没有触发艺人提升")
-        
-check_zhujiemian()
-
-
 
 simple_report(
     filepath=__file__,
     logpath=log_dir,
     output=os.path.join(log_dir, "report.html")
 )
+
+chonglian()
+sleep(30)
 
 
