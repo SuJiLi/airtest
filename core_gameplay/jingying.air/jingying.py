@@ -79,7 +79,7 @@ if exists(Template(r"tpl1744873343758.png")):
         touch(Template(r"tpl1744873390458.png", record_pos=(0.385, -0.158), resolution=(1080, 2220)))
     sleep(5)
     if exists(Template(r"tpl1744873577354.png")):
-        touch((766,1687))
+        touch((766,1687))#这里要改，会点到大楼ui
     sleep(5)
 sleep(5)
 touch(Template(r"tpl1744873733101.png", record_pos=(-0.421, 0.669), resolution=(1080, 2220)))

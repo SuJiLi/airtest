@@ -37,10 +37,13 @@ sleep(5)
 touch(Template(r"tpl1743046587009.png", record_pos=(-0.409, -0.736), resolution=(1080, 2220)))
 check_zhujiemian()
 
+
+
+
 simple_report(
     filepath=__file__,
     logpath=log_dir,
     output=os.path.join(log_dir, "report.html")
 )
-
-
+stop_app("com.tencent.mm")
+keyevent("POWER")
