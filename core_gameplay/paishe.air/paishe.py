@@ -56,7 +56,7 @@ try:
         else:
             sleep(5)
             try:
-                            if wait(Template(r"tpl1744698977920.png", threshold=0.8)):
+                            if wait(Template(r"tpl1744698977920.png", threshold=0.6)):
                                 print("资源足够")
                                 touch(Template(r"tpl1744602184076.png", record_pos=(0.239, -0.258), resolution=(1080, 2220)))
                                 check_image1(r"tpl1744602209051.png")
@@ -154,7 +154,6 @@ simple_report(
     logpath=log_dir,
     output=os.path.join(log_dir, "report.html")
 )
-
 chonglian()
 sleep(30)
 

@@ -54,7 +54,7 @@ touch(Template(r"tpl1744945173513.png", record_pos=(-0.44, -0.842), resolution=(
 check_zhujiemian()
 if exists(Template(r"tpl1744945213348.png")):
     touch(Template(r"tpl1744945213348.png", record_pos=(0.33, -0.151), resolution=(1080, 2220)))
-    if exists(Template(r"tpl1744945261635.png")):
+    if exists(Template(r"tpl1749782640444.png", record_pos=(0.004, -0.778), resolution=(1080, 2240))):
         check_image2(r"tpl1744945261635.png")
         touch(Template(r"tpl1744945292173.png", record_pos=(-0.455, -0.835), resolution=(1080, 2220)))
         check_zhujiemian()
@@ -141,10 +141,6 @@ touch(Template(r"tpl1744958815859.png", record_pos=(-0.454, -0.847), resolution=
 sleep(5)
 touch(Template(r"tpl1744958896792.png", record_pos=(-0.444, -0.843), resolution=(1080, 2220)))
 check_zhujiemian()
-touch(Template(r"tpl1744959014248.png", record_pos=(0.206, -0.826), resolution=(1080, 2220)))
-check_image1(r"tpl1744959033098.png")
-sleep(1)
-touch(Template(r"tpl1749106617460.png", record_pos=(-0.438, 0.974), resolution=(1080, 2240)))
 check_zhujiemian()
 simple_report(
     filepath=__file__,
