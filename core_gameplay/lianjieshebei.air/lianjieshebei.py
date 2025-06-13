@@ -28,7 +28,7 @@ retry_count = 0
 while retry_count < max_retries:
     if is_locked():
         keyevent("POWER")  # 唤醒屏幕
-        swipe((551,1800),(543,470))
+        swipe((551,2124),(543,470))
             # 再次检查是否仍然锁定
         if is_locked():
             keyevent("POWER")
