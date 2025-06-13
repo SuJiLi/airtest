@@ -17,13 +17,18 @@ if exists(Template(r"tpl1747623526623.png", threshold=0.5)):
     sleep(5)
     if exists(Template(r"tpl1747623606770.png")):
         touch(Template(r"tpl1747623606770.png", record_pos=(0.219, 0.716), resolution=(1080, 2240)))
+        sleep(5)
+        touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
+    
+        sleep(5)
+        touch((762,1852))
     elif exists(Template(r"tpl1749692298465.png")):
         touch(Template(r"tpl1749692298465.png", record_pos=(0.217, 0.719), resolution=(1080, 2240)))
-    sleep(5)
-    touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
+        sleep(5)
+        touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
     
-    sleep(5)
-    touch((762,1852))
+        sleep(5)
+        touch((762,1852))
 check_zhujiemian()
 touch(Template(r"tpl1744944382976.png", record_pos=(0.446, 0.569), resolution=(1080, 2220)))
 sleep(5)
@@ -161,3 +166,4 @@ simple_report(
 
     
 
+ 
