@@ -120,10 +120,11 @@ sleep(3)
 touch(Template(r"tpl1744610122133.png", record_pos=(-0.002, 0.642), resolution=(1080, 2220)))
 sleep(20)
 try:
-    if exists(Template(r"tpl1744610201164.png")):
+    if exists(Template(r"tpl1744610201164.png", threshold=0.9)):
+        print("目标未达成")
 
         touch((836,1802))
-    elif exists(Template(r"tpl1744619679304.png")):
+    else:
         touch(Template(r"tpl1744615830450.png", record_pos=(-0.003, 0.243), resolution=(1080, 2220)))
 except TargetNotFoundError:
         print("目标提前出现")
