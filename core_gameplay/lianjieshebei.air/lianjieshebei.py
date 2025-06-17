@@ -13,9 +13,9 @@ def is_locked():
 
 
 
-dev = connect_device("Android:///TPC7N18515001155")
+dev = connect_device("Android:///Q2NVB21806000861")
 try:
-    dev = connect_device("Android:///TPC7N18515001155")
+    dev = connect_device("Android:///Q2NVB21806000861")
     if not dev:
         raise RuntimeError("设备连接失败")
     print("设备连接成功")

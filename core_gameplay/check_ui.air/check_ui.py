@@ -4,9 +4,9 @@ from airtest.report.report import simple_report
 import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from airtest.core.settings import Settings as ST 
-from common import check_image1,check_image2,check_zhujiemian 
+from common import check_image1,check_image2,check_zhujiemian,dev1
 
-dev = connect_device("Android:///TPC7N18515001155")
+dev = connect_device("Android:///Q2NVB21806000861")
 sleep(10)
 log_dir = r"D:\PiaoFang_Test\core_gameplay\check_ui_log"
 os.makedirs(log_dir, exist_ok=True)  # 确保目录存在

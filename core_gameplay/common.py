@@ -38,6 +38,8 @@ def check_zhujiemian():
     if not exists(Template(r"tpl1745907542094.png", threshold=0.6)):
         print("存在异常界面就关闭")
         touch(Template(r"tpl1744872751817.png", record_pos=(-0.421, -0.664), resolution=(1080, 2220)))
+    if exists(Template(r"tpl1750126196654.png")):
+        touch(Template(r"tpl1750126227738.png", record_pos=(-0.366, -0.366), resolution=(1080, 2400)))
 def shengji():
     sleep(3)
     if exists(Template(r"tpl1745478669410.png", threshold=0.9)):
@@ -55,6 +57,8 @@ def chonglian():
     sleep(50)
     if wait(Template(r"tpl1749109161160.png")):
         print("已重启")
+        
+
          
 
 

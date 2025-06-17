@@ -7,7 +7,7 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from common import check_image1,check_image2,check_zhujiemian
 
-dev = connect_device("Android:///TPC7N18515001155")
+dev = connect_device("Android:///Q2NVB21806000861")
 os.path.dirname(os.path.abspath(__file__))
 
 log_dir = r"D:\PiaoFang_Test\core_gameplay\yiren_log"
