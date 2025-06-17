@@ -4,7 +4,7 @@ from airtest.report.report import simple_report
 import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from airtest.core.settings import Settings as ST 
-from common import check_image1,check_image2,check_zhujiemian,dev1
+from common import check_image1,check_image2,check_zhujiemian
 
 dev = connect_device("Android:///Q2NVB21806000861")
 sleep(10)
