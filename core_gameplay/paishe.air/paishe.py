@@ -19,7 +19,7 @@ sleep(5)
 try:
     if exists(Template(r"tpl1744630226810.png", threshold=0.7)):
         print("电影满了")
-        touch((54,1848))
+        touch((61,1892))
         sleep(5)
         touch(Template(r"tpl1744623426320.png", record_pos=(0.27, 0.544), resolution=(1080, 2220)))
         sleep(5)
