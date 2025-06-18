@@ -13,45 +13,45 @@ os.makedirs(log_dir, exist_ok=True)  # 确保目录存在
 set_logdir(log_dir)  # 强制指定日志位置
 os.path.dirname(os.path.abspath(__file__))
 
-# if exists(Template(r"tpl1747623526623.png", threshold=0.5)):
-#     sleep(5)
-#     if exists(Template(r"tpl1747623606770.png")):
-#         touch(Template(r"tpl1747623606770.png", record_pos=(0.219, 0.716), resolution=(1080, 2240)))
-#         sleep(5)
-#         touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
+if exists(Template(r"tpl1747623526623.png", threshold=0.5)):
+    sleep(5)
+    if exists(Template(r"tpl1747623606770.png")):
+        touch(Template(r"tpl1747623606770.png", record_pos=(0.219, 0.716), resolution=(1080, 2240)))
+        sleep(5)
+        touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
     
-#         sleep(5)
-#         touch((762,1852))
-#     elif exists(Template(r"tpl1749692298465.png")):
-#         touch(Template(r"tpl1749692298465.png", record_pos=(0.217, 0.719), resolution=(1080, 2240)))
-#         sleep(5)
-#         touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
+        sleep(5)
+        touch((762,1852))
+    elif exists(Template(r"tpl1749692298465.png")):
+        touch(Template(r"tpl1749692298465.png", record_pos=(0.217, 0.719), resolution=(1080, 2240)))
+        sleep(5)
+        touch(Template(r"tpl1747623642976.png", record_pos=(-0.004, 0.194), resolution=(1080, 2240)))
     
-#         sleep(5)
-#         touch((762,1852))
-# check_zhujiemian()
-# touch(Template(r"tpl1744944382976.png", record_pos=(0.446, 0.569), resolution=(1080, 2220)))
-# sleep(5)
-# if exists(Template(r"tpl1745307989339.png")):
-#     touch(Template(r"tpl1745308006347.png", record_pos=(-0.17, 0.203), resolution=(1080, 2220)))
-# check_image1(r"tpl1744944406386.png")
+        sleep(5)
+        touch((762,1852))
+check_zhujiemian()
+touch(Template(r"tpl1744944382976.png", record_pos=(0.446, 0.569), resolution=(1080, 2220)))
+sleep(5)
+if exists(Template(r"tpl1745307989339.png")):
+    touch(Template(r"tpl1745308006347.png", record_pos=(-0.17, 0.203), resolution=(1080, 2220)))
+check_image1(r"tpl1744944406386.png")
 
-# sleep(5)
-# touch(Template(r"tpl1744944529252.png", record_pos=(-0.388, -0.65), resolution=(1080, 2220)))
-# sleep(5)
-# check_zhujiemian()
-# touch(Template(r"tpl1744944565443.png", record_pos=(0.445, 0.46), resolution=(1080, 2220)))
-# check_image2(r"tpl1744944585710.png")
-# touch(Template(r"tpl1744944642422.png", record_pos=(-0.441, -0.678), resolution=(1080, 2220)))
-# check_zhujiemian()
-# touch(Template(r"tpl1744944669943.png", record_pos=(0.329, -0.037), resolution=(1080, 2220)))
-# check_image2(r"tpl1744944813330.png")
-# touch(Template(r"tpl1744944844414.png", record_pos=(-0.439, -0.832), resolution=(1080, 2220)))
-# check_zhujiemian()
-# touch(Template(r"tpl1744944889017.png", record_pos=(0.447, -0.363), resolution=(1080, 2220)))
-# check_image2(r"tpl1744944910440.png")
-# touch(Template(r"tpl1744945173513.png", record_pos=(-0.44, -0.842), resolution=(1080, 2220)))
-# check_zhujiemian()
+sleep(5)
+touch(Template(r"tpl1744944529252.png", record_pos=(-0.388, -0.65), resolution=(1080, 2220)))
+sleep(5)
+check_zhujiemian()
+touch(Template(r"tpl1744944565443.png", record_pos=(0.445, 0.46), resolution=(1080, 2220)))
+check_image2(r"tpl1744944585710.png")
+touch(Template(r"tpl1744944642422.png", record_pos=(-0.441, -0.678), resolution=(1080, 2220)))
+check_zhujiemian()
+touch(Template(r"tpl1744944669943.png", record_pos=(0.329, -0.037), resolution=(1080, 2220)))
+check_image2(r"tpl1744944813330.png")
+touch(Template(r"tpl1744944844414.png", record_pos=(-0.439, -0.832), resolution=(1080, 2220)))
+check_zhujiemian()
+touch(Template(r"tpl1744944889017.png", record_pos=(0.447, -0.363), resolution=(1080, 2220)))
+check_image2(r"tpl1744944910440.png")
+touch(Template(r"tpl1744945173513.png", record_pos=(-0.44, -0.842), resolution=(1080, 2220)))
+check_zhujiemian()
 if exists(Template(r"tpl1744945213348.png")):
     touch(Template(r"tpl1744945213348.png", record_pos=(0.33, -0.151), resolution=(1080, 2220)))
     if exists(Template(r"tpl1750133454661.png", record_pos=(-0.025, 0.913), resolution=(1080, 2400))):

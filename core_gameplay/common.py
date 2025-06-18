@@ -27,7 +27,7 @@ def check_image2(image_path):
             image_path, 
             record_pos=(0.003, -0.009), 
             resolution=(1080, 2220),
-            threshold=0.95,  # 适当降低匹配精度
+            threshold=0.99,  # 适当降低匹配精度
         ), timeout=20)  # 超时减半
         print("界面正常" if pic else "界面不正常")  # 直接利用pic布尔值
     except TargetNotFoundError:
@@ -57,6 +57,25 @@ def chonglian():
     sleep(50)
     if wait(Template(r"tpl1749109161160.png")):
         print("已重启")
+        
+def click_template_if_exists(template_path, click_path=None, threshold=0.8):
+    """
+    如果找到模板图片，则点击指定图片
+    
+    参数:
+    template_path (str): 要查找的模板图片路径
+    click_path (str): 要点击的图片路径(如果为None则点击找到的模板位置)
+    threshold (float): 匹配阈值(0-1)
+    """
+    if exists(Template(template_path, threshold=threshold)):
+        if click_path is None:
+            # 如果未指定点击图片，则点击找到的模板位置
+            touch(Template(template_path, threshold=threshold))
+        else:
+            # 点击指定的图片
+            touch(Template(click_path, threshold=threshold))
+        return True
+    return False
         
 
          
