@@ -12,30 +12,30 @@ os.makedirs(log_dir, exist_ok=True)  # 确保目录存在
 set_logdir(log_dir)  # 强制指定日志位置
 
 
-# check_image1(r"tpl1750143420095.png")
-# #检查超偶奖励
-# chaoou=click_template_if_exists(r"tpl1750143981388.png")
-# sleep(5)
-# if chaoou:
-#     if exists(Template(r"tpl1750144508786.png")):
-#         check_image2(r"tpl1750145054142.png")
-#         sleep(3)
-#         touch(Template(r"tpl1750145108346.png", record_pos=(0.017, -0.253), resolution=(1080, 2400)))
-#         sleep(3)
-#         check_image2(r"tpl1750145139525.png")
-#         sleep(3)
-#         touch(Template(r"tpl1750145183740.png", record_pos=(0.329, -0.259), resolution=(1080, 2400)))
-#         sleep(3)
-#         check_image2(r"tpl1750145379356.png")
-#         sleep(3)
-#         swipe((545,1965),(545,786))
-#         sleep(3)
-#         swipe((545,1965),(545,786))
-#         sleep(5)
-#         check_image2(r"tpl1750146083478.png")
-#         touch(Template(r"tpl1750146482508.png", record_pos=(-0.456, -0.867), resolution=(1080, 2400)))
+check_image1(r"tpl1750143420095.png")
+#检查超偶奖励
+chaoou=click_template_if_exists(r"tpl1750143981388.png")
+sleep(5)
+if chaoou:
+    if exists(Template(r"tpl1750144508786.png")):
+        check_image2(r"tpl1750145054142.png")
+        sleep(3)
+        touch(Template(r"tpl1750145108346.png", record_pos=(0.017, -0.253), resolution=(1080, 2400)))
+        sleep(3)
+        check_image2(r"tpl1750145139525.png")
+        sleep(3)
+        touch(Template(r"tpl1750145183740.png", record_pos=(0.329, -0.259), resolution=(1080, 2400)))
+        sleep(3)
+        check_image2(r"tpl1750145379356.png")
+        sleep(3)
+        swipe((545,1965),(545,786))
+        sleep(3)
+        swipe((545,1965),(545,786))
+        sleep(5)
+        check_image2(r"tpl1750146083478.png")
+        touch(Template(r"tpl1750146482508.png", record_pos=(-0.456, -0.867), resolution=(1080, 2400)))
 
-# check_zhujiemian()
+check_zhujiemian()
 touch(Template(r"tpl1750150481224.png", record_pos=(0.328, -0.592), resolution=(1080, 2400)))
 sleep(5)
 if exists(Template(r"tpl1750150567564.png")):
@@ -56,15 +56,128 @@ check_zhujiemian()
 sleep(3)
 touch(Template(r"tpl1750152458184.png", record_pos=(0.328, -0.697), resolution=(1080, 2400)))
 sleep(3)
-if exists(Template(r"tpl1750153163628.png")):
-    touch(Template(r"tpl1750153196217.png", record_pos=(-0.145, -0.497), resolution=(1080, 2400)))
+if exists(Template(r"tpl1750153163628.png", rgb=True)):
+    touch(Template(r"tpl1750153196217.png", rgb=True, record_pos=(-0.145, -0.497), resolution=(1080, 2400)))
     check_image2(r"tpl1750154067296.png")
     sleep(5)
-    swipe((520,2043),())
 else:
     swipe((926,663),(83,663))
-    if exists(Template(r"tpl1750153196217.png")):
-    sleep(touch(Template(r"tpl1750153196217.png", record_pos=(-0.145, -0.497), resolution=(1080, 2400)))
+    sleep(5)
+    if exists(Template(r"tpl1750153196217.png", rgb=True)):
+        touch(Template(r"tpl1750153196217.png", rgb=True, record_pos=(-0.145, -0.497), resolution=(1080, 2400)))
+        sleep(5)
+        check_image2(r"tpl1750231129006.png")
+check_zhujiemian()
+
+yingyelianmeng=click_template_if_exists(r"tpl1750232051691.png")
+if yingyelianmeng:
+    sleep(5)
+    touch(Template(r"tpl1750232356251.png", record_pos=(0.409, 0.976), resolution=(1080, 2400)))
+    check_image2(r"tpl1750232382887.png")
+    touch(Template(r"tpl1750232419891.png", record_pos=(-0.431, -0.858), resolution=(1080, 2400)))
+    sleep(5)
+    touch(Template(r"tpl1750232449217.png", record_pos=(-0.454, -0.863), resolution=(1080, 2400)))
+check_zhujiemian()
+
+touch(Template(r"tpl1750152458184.png", record_pos=(0.328, -0.697), resolution=(1080, 2400)))
+sleep(3)
+if exists(Template(r"tpl1750233150889.png")):
+    
+    touch(Template(r"tpl1750233150889.png", rgb=True, record_pos=(0.256, -0.488), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750233467185.png", record_pos=(0.0, 0.654), resolution=(1080, 2400)))
+    sleep(5)
+    touch(Template(r"tpl1750233509734.png", record_pos=(0.428, 1.008), resolution=(1080, 2400)))
+    check_image2(r"tpl1750233528784.png")
+    touch(Template(r"tpl1750233582002.png", record_pos=(-0.45, -0.86), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750233604631.png", record_pos=(-0.094, 1.006), resolution=(1080, 2400)))
+    sleep(5)
+    check_image2(r"tpl1750233802053.png")
+    sleep(3)
+    touch(Template(r"tpl1750233985761.png", record_pos=(-0.431, -0.856), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750234283530.png", record_pos=(-0.434, -0.655), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750234283530.png", record_pos=(-0.434, -0.655), resolution=(1080, 2400)))
+    check_zhujiemian()
+    
+else:
+    swipe((926,663),(83,663))
+    sleep(5)
+    touch(Template(r"tpl1750233150889.png", rgb=True, record_pos=(0.256, -0.488), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750233467185.png", record_pos=(0.0, 0.654), resolution=(1080, 2400)))
+    sleep(5)
+    touch(Template(r"tpl1750233509734.png", record_pos=(0.428, 1.008), resolution=(1080, 2400)))
+    check_image2(r"tpl1750233528784.png")
+    touch(Template(r"tpl1750233582002.png", record_pos=(-0.45, -0.86), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750233604631.png", record_pos=(-0.094, 1.006), resolution=(1080, 2400)))
+    sleep(5)
+    check_image2(r"tpl1750233802053.png")
+    sleep(3)
+    touch(Template(r"tpl1750233985761.png", record_pos=(-0.431, -0.856), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750234283530.png", record_pos=(-0.434, -0.655), resolution=(1080, 2400)))
+    sleep(3)
+    touch(Template(r"tpl1750234283530.png", record_pos=(-0.434, -0.655), resolution=(1080, 2400)))
+    check_zhujiemian()
+
+
+touch(Template(r"tpl1750152458184.png", record_pos=(0.328, -0.697), resolution=(1080, 2400)))
+sleep(3)
+if exists(Template(r"tpl1750235061235.png")):
+    touch(Template(r"tpl1750235061235.png", rgb=True, record_pos=(0.141, -0.484), resolution=(1080, 2400)))
+    sleep(5)
+    if exists(Template(r"tpl1750235761329.png")):
+        
+        sleep(5)
+        touch(Template(r"tpl1750235241615.png", record_pos=(-0.003, 0.664), resolution=(1080, 2400)))
+        sleep(5)
+        touch(Template(r"tpl1750235262604.png", record_pos=(-0.371, 0.024), resolution=(1080, 2400)))
+        sleep(5)
+        check_image2(r"tpl1750235298993.png")
+        touch(Template(r"tpl1750236505921.png", record_pos=(-0.436, -0.74), resolution=(1080, 2400)))
+        sleep(3)
+        touch(Template(r"tpl1750236531600.png", record_pos=(-0.444, -0.854), resolution=(1080, 2400)))
+        sleep(3)
+        touch(Template(r"tpl1750236553176.png", record_pos=(-0.432, -0.653), resolution=(1080, 2400)))
+
+        check_zhujiemian()
+
+else:
+        swipe((926,663),(83,663))
+        sleep(5)
+        touch(Template(r"tpl1750235061235.png", rgb=True, record_pos=(0.141, -0.484), resolution=(1080, 2400)))
+        sleep(5)
+        #冒险片
+        if exists(Template(r"tpl1750235761329.png")):
+
+            sleep(5)
+            touch(Template(r"tpl1750235241615.png", record_pos=(-0.003, 0.664), resolution=(1080, 2400)))
+            sleep(5)
+            touch(Template(r"tpl1750235262604.png", record_pos=(-0.371, 0.024), resolution=(1080, 2400)))
+            sleep(5)
+            check_image2(r"tpl1750235298993.png")
+            touch(Template(r"tpl1750236505921.png", record_pos=(-0.436, -0.74), resolution=(1080, 2400)))
+            sleep(3)
+            touch(Template(r"tpl1750236531600.png", record_pos=(-0.444, -0.854), resolution=(1080, 2400)))
+            sleep(3)
+            touch(Template(r"tpl1750236553176.png", record_pos=(-0.432, -0.653), resolution=(1080, 2400)))          
+            check_zhujiemian()
+
+
+    
+    
+    
+    
+    
+    
+    
+       
+
+    
     
     
 
