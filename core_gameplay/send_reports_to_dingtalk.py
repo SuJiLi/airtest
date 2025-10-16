@@ -25,7 +25,7 @@ def collect_test_reports(workspace_path):
 
 def main():
     # 替换为你的钉钉token
-    DINGTALK_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=YOUR_TOKEN"
+    DINGTALK_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=d93115cbf7b839a6e78d457230a9cb29efb0b3ec75560609519dcac8c6f86312"
     
     WORKSPACE = r'C:\ProgramData\Jenkins\.jenkins\workspace\Piaofangdamaiwang\core_gameplay'
     
