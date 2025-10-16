@@ -4,7 +4,8 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from common import check_image1,check_image2,check_zhujiemian,chonglian,click_template_if_exists
 
-dev = connect_device("Android:///Q2NVB21806000861")
+# dev = connect_device("Android:///Q2NVB21806000861")
+auto_setup()
 os.path.dirname(os.path.abspath(__file__))
 
 log_dir = r"D:\PiaoFang_Test\core_gameplay\huodong_log"
@@ -167,58 +168,6 @@ else:
             touch(Template(r"tpl1750236553176.png", record_pos=(-0.432, -0.653), resolution=(1080, 2400)))          
             check_zhujiemian()
 
-
-    
-    
-    
-    
-    
-    
-    
-       
-
-    
-    
-    
-
-
-        
-        
-        
-        
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 simple_report(
     filepath=__file__,

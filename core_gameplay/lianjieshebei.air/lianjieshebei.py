@@ -13,9 +13,9 @@ def is_locked():
 
 
 
-dev = connect_device("Android:///Q2NVB21806000861")
+dev = connect_device("Android:///AYATVB5528001633")
 try:
-    dev = connect_device("Android:///Q2NVB21806000861")
+    dev = connect_device("Android:///AYATVB5528001633")
     if not dev:
         raise RuntimeError("设备连接失败")
     print("设备连接成功")
@@ -48,4 +48,6 @@ sleep(10)
 swipe((501,334),(567,1539))
 sleep(5)
 touch(Template(r"tpl1747623798740.png", threshold=0.5, record_pos=(-0.342, -0.298), resolution=(1080, 2240)))
-sleep(60)
+sleep(15)
+touch((612,1815))
+sleep(30)
