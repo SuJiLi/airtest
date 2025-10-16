@@ -5,10 +5,12 @@ import sys
 sys.path.append(r"D:\PiaoFang_Test\core_gameplay")
 from common import check_image1,check_image2,check_zhujiemian
 
+dev = connect_device("Android:///AYATVB5528001633")
+auto_setup()
 log_dir = r"D:\PiaoFang_Test\core_gameplay\cangku_log"
 os.makedirs(log_dir, exist_ok=True)  # 确保目录存在
 set_logdir(log_dir)  # 强制指定日志位置
-dev = connect_device("Android:///AYATVB5528001633")
+# dev = connect_device("Android:///AYATVB5528001633")
 
 check_image1(r"tpl1744883377895.png")
 touch(Template(r"tpl1744883794540.png", record_pos=(0.419, 0.967), resolution=(1080, 2220)))
